@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
-    public GameObject cam;
+    public Camera cam;
     public Animator swordAnim;
     public GameObject player;
     public Transform weaponHolder;
-    private Vector3 defaultScale;
 
     public bool hasSword;
     private bool blocking, attacking;
@@ -17,8 +16,7 @@ public class Sword : MonoBehaviour
     {
         swordAnim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
-        cam = GameObject.Find("Camera");
-        defaultScale = transform.localScale;
+        cam = Camera.FindObjectOfType<Camera>();
 
     }
     void Update()
@@ -42,7 +40,6 @@ public class Sword : MonoBehaviour
                 transform.GetComponent<Rigidbody>().useGravity = true;
                 transform.GetComponent<Rigidbody>().freezeRotation = false;
                 transform.parent = null;
-                transform.localScale = defaultScale;
             }
             if (Input.GetMouseButtonDown(0) && !blocking)
             {
@@ -72,6 +69,15 @@ public class Sword : MonoBehaviour
                     player.GetComponent<PlayerMovement>().attacking = false;
                 }
             }
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "HellHound" && attacking)
+        {
+
+            other.GetComponent<HellHound>().TakeDamage(60);
         }
     }
 }
