@@ -17,7 +17,6 @@ public class Bow : MonoBehaviour
     public float chargeMax;
     public float chargeRate;
 
-    public KeyCode fireButton;
     public Transform shootPoint;
     public Rigidbody arrowObj;
 

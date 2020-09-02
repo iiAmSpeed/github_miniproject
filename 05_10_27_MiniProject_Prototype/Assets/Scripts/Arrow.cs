@@ -30,6 +30,7 @@ public class Arrow : MonoBehaviour
         {
             hitSomething = true;
             ArrowStick();
+            transform.GetComponent<Collider>().isTrigger = true;
         }
     }
 
