@@ -30,7 +30,30 @@ public class Arrow : MonoBehaviour
         {
             hitSomething = true;
             ArrowStick();
+
+            if(collision.gameObject.tag == "HellHound")
+            {
+                transform.parent = collision.transform;
+                collision.gameObject.GetComponent<HellHound>().TakeDamage(10);
+            }
+            else if (collision.gameObject.tag == "GiantSpider")
+            {
+                transform.parent = collision.transform;
+                collision.gameObject.GetComponent<GiantSpider>().TakeDamage(10);
+            }
+            else if(collision.gameObject.tag == "Minotaur")
+            {
+                transform.parent = collision.transform;
+                collision.gameObject.GetComponent<Minotaur>().TakeDamage(10);
+            }
+            else if(collision.gameObject.tag == "Cyclops")
+            {
+                transform.parent = collision.transform;
+                collision.gameObject.GetComponent<Cyclops>().TakeDamage(10);
+            }
+
         }
+
     }
 
     private void ArrowStick()

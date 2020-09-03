@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
-    public Camera cam;
+    public GameObject cam;
     public Animator swordAnim;
     public GameObject player;
     public Transform weaponHolder;
+    private Vector3 defaultScale;
 
     public bool hasSword;
-    private bool blocking, attacking;
+    public bool blocking, attacking;
 
     void Start()
     {
         swordAnim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
-        cam = Camera.FindObjectOfType<Camera>();
-
+        cam = GameObject.Find("Camera");
+        defaultScale = transform.localScale;
     }
     void Update()
     {
@@ -40,6 +41,7 @@ public class Sword : MonoBehaviour
                 transform.GetComponent<Rigidbody>().useGravity = true;
                 transform.GetComponent<Rigidbody>().freezeRotation = false;
                 transform.parent = null;
+                transform.localScale = defaultScale;
             }
             if (Input.GetMouseButtonDown(0) && !blocking)
             {
@@ -74,10 +76,32 @@ public class Sword : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "HellHound" && attacking)
+        print(other.name);
+        if (attacking)
         {
+            if (other.gameObject.tag == "HellHound")
+            {
+                other.GetComponent<HellHound>().TakeDamage(20);
+            }
+            else if (other.gameObject.tag == "GiantSpider")
+            {
 
-            other.GetComponent<HellHound>().TakeDamage(60);
+                other.GetComponent<GiantSpider>().TakeDamage(20);
+            }
+
+            else if (other.gameObject.tag == "Minotaur" )
+            {
+
+                other.GetComponent<Minotaur>().TakeDamage(20);
+            }
+
+            else if (other.gameObject.tag == "Cyclops")
+            {
+
+                other.GetComponent<Cyclops>().TakeDamage(20);
+            }
         }
+
+        
     }
 }

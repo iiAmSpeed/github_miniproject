@@ -62,15 +62,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\LevelLoader.cs" />
+    <Compile Include="Assets\restartscript.cs" />
     <Compile Include="Assets\Scripts\Arrow.cs" />
     <Compile Include="Assets\Scripts\Bow.cs" />
     <Compile Include="Assets\Scripts\Cam.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
+    <Compile Include="Assets\Scripts\Cyclops.cs" />
     <Compile Include="Assets\Scripts\enemyMovementScript.cs" />
     <Compile Include="Assets\Scripts\EnemyTriggerScript.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\GiantSpiderScript.cs" />
+    <Compile Include="Assets\Scripts\GiantSpider.cs" />
     <Compile Include="Assets\Scripts\HellHound.cs" />
+    <Compile Include="Assets\Scripts\Minotaur.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
@@ -79,37 +83,37 @@
     <Compile Include="Assets\Scripts\WeaponPickUp.cs" />
     <None Include="Assets\Seven Swords\Swords\Shader\ToonSwords.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/raimi/OneDrive/Documents/GitHub/github_miniproject/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/raimi/OneDrive/Desktop/backup/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/raimi/OneDrive/Documents/GitHub/github_miniproject/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/raimi/OneDrive/Desktop/backup/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>C:/Users/raimi/OneDrive/Documents/GitHub/github_miniproject/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+      <HintPath>C:/Users/raimi/OneDrive/Desktop/backup/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/raimi/OneDrive/Documents/GitHub/github_miniproject/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/raimi/OneDrive/Desktop/backup/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/raimi/OneDrive/Documents/GitHub/github_miniproject/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/raimi/OneDrive/Desktop/backup/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/raimi/OneDrive/Documents/GitHub/github_miniproject/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/raimi/OneDrive/Desktop/backup/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/raimi/OneDrive/Documents/GitHub/github_miniproject/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/raimi/OneDrive/Desktop/backup/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/raimi/OneDrive/Documents/GitHub/github_miniproject/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/raimi/OneDrive/Desktop/backup/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
-      <HintPath>C:/Users/raimi/OneDrive/Documents/GitHub/github_miniproject/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+      <HintPath>C:/Users/raimi/OneDrive/Desktop/backup/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/raimi/OneDrive/Documents/GitHub/github_miniproject/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/raimi/OneDrive/Desktop/backup/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/raimi/OneDrive/Documents/GitHub/github_miniproject/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/raimi/OneDrive/Desktop/backup/05_10_27_MiniProject_Prototype/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

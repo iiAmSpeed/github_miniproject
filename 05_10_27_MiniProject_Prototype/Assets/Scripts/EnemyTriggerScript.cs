@@ -6,6 +6,7 @@ public class EnemyTriggerScript : MonoBehaviour
 {
     public GameObject enemy;
     public GameObject enemySpawner;
+    public GameObject[] boss;
     public string enemyCategory;
 
     // Start is called before the first frame update
@@ -31,12 +32,25 @@ public class EnemyTriggerScript : MonoBehaviour
                 Instantiate(enemy, enemySpawner.transform.position, Quaternion.identity);
                 Instantiate(enemy, enemySpawner.transform.position, Quaternion.identity);
             }
-            else if(enemyCategory != "common")
+
+            else if (enemyCategory != "common" && GameManager.instance.level == 2)
             {
-                Instantiate(enemy, enemySpawner.transform.position, Quaternion.identity);
+                print("spawn cyclops");
+                Instantiate(boss[2], enemySpawner.transform.position, Quaternion.identity);
             }
-            
-            
+
+            else if (enemyCategory != "common" && GameManager.instance.level == 1)
+            {
+                print("spawn giant spider");
+                Instantiate(boss[1], enemySpawner.transform.position, Quaternion.identity);
+            }
+
+            else if(enemyCategory != "common" && GameManager.instance.level == 0)
+            {
+                print("spawn minotaur");
+                Instantiate(boss[0], enemySpawner.transform.position, Quaternion.identity);
+            }
+
         }
     }
     

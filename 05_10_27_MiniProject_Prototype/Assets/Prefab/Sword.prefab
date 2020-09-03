@@ -128,8 +128,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.19, y: 1.4367466, z: 0.073971905}
-  m_Center: {x: 0.000000045388845, y: 0.50766563, z: 0.000000008037608}
+  m_Size: {x: 0.19, y: 1.7257355, z: 0.073971905}
+  m_Center: {x: 0.00000005837577, y: 0.65216124, z: 0.000000007105991}
 --- !u!114 &488763809373081086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,3 +147,5 @@ MonoBehaviour:
   player: {fileID: 0}
   weaponHolder: {fileID: 0}
   hasSword: 0
+  blocking: 0
+  attacking: 0

@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Arrow
+  - HellHound
+  - Minotaur
+  - GiantSpider
+  - Cyclops
   layers:
   - Default
   - TransparentFX
